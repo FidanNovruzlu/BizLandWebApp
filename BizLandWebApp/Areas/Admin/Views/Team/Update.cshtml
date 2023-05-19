@@ -1,0 +1,23 @@
+﻿@model UpdateTeamVM
+
+<div>
+    <h1>Team Create</h1>
+    <form class="container p-5" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" id="exampleInputPassword1">
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Job"></label>
+            <input asp-for="Job" class="form-control" id="exampleInputPassword1">
+            <span class="text-danger" asp-validation-for="Job"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Image"></label>
+            <input asp-for="Image" class="form-control" id="exampleInputPassword1">
+            <span class="text-danger" asp-validation-for="Image"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
