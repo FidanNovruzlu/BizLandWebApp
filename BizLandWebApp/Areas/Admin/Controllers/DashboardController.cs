@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
-namespace BizLandWebApp.Areas.Admin.Controllers
+namespace BizLandWebApp.Areas.Admin.Controllers;
+
+[Area("Admin")]
+[Authorize(Roles ="Admin")]
+public class DashboardController : Controller
 {
-    [Area("Admin")]
-    public class DashboardController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
     }
 }

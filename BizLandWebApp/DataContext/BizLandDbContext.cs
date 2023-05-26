@@ -10,6 +10,7 @@ namespace BizLandWebApp.DataContext
         {
 
         }
+       
         public DbSet<Team> Teams { get; set; }
         public DbSet<Service> Services { get; set; }
     }

@@ -18,6 +18,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Password.RequireLowercase= false;
 
     opt.User.RequireUniqueEmail= true;
+    opt.SignIn.RequireConfirmedEmail= true;
 
 }).AddDefaultTokenProviders().AddEntityFrameworkStores<BizLandDbContext>();
 
